@@ -1,26 +1,34 @@
 # rfid_agent/uploader_async.py
 import asyncio
 import httpx
+import threading
+import queue
 import keyring
-
 from config import API_URL
 from credential_ui import create_credential_ui
+
+def run_ui_in_thread(login_url, result_queue):
+    def on_submit(token):
+        result_queue.put(token)
+    root = create_credential_ui(on_submit, login_url)
+    root.mainloop()
 
 async def send_rfids_to_server_async(rfid_list, retries=3, login_url="http://localhost:8000/api/login/"):
     if not rfid_list:
         return
+    print(f"Attempting to send RFIDs: {rfid_list}")
     token = keyring.get_password("rfid_agent", "token")
     if not token:
         print("⚠️ No token found, prompting for credentials")
-        loop = asyncio.get_event_loop()
-        token_set = False
-        def set_token(t):
-            nonlocal token_set
-            token_set = True
-        loop.run_in_executor(None, lambda: create_credential_ui(set_token, login_url).mainloop())
-        while not token_set:
-            await asyncio.sleep(0.1)
-        token = keyring.get_password("rfid_agent", "token")
+        result_queue = queue.Queue()
+        ui_thread = threading.Thread(target=run_ui_in_thread, args=(login_url, result_queue), daemon=True)
+        ui_thread.start()
+        ui_thread.join()  # Wait for UI to close
+        try:
+            token = result_queue.get_nowait()
+        except queue.Empty:
+            print("⚠️ Failed to obtain token from UI")
+            return
         if not token:
             print("⚠️ Failed to obtain token")
             return
@@ -40,15 +48,15 @@ async def send_rfids_to_server_async(rfid_list, retries=3, login_url="http://loc
                     return
                 elif response.status_code == 401:
                     print("⚠️ Invalid token, prompting for credentials")
-                    loop = asyncio.get_event_loop()
-                    token_set = False
-                    def set_token(t):
-                        nonlocal token_set
-                        token_set = True
-                    loop.run_in_executor(None, lambda: create_credential_ui(set_token, login_url).mainloop())
-                    while not token_set:
-                        await asyncio.sleep(0.1)
-                    token = keyring.get_password("rfid_agent", "token")
+                    result_queue = queue.Queue()
+                    ui_thread = threading.Thread(target=run_ui_in_thread, args=(login_url, result_queue), daemon=True)
+                    ui_thread.start()
+                    ui_thread.join()
+                    try:
+                        token = result_queue.get_nowait()
+                    except queue.Empty:
+                        print("⚠️ Failed to obtain token from UI")
+                        return
                     if not token:
                         print("⚠️ Failed to obtain token")
                         return

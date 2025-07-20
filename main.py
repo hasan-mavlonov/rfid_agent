@@ -1,22 +1,22 @@
 # rfid_agent/main.py
 import asyncio
-import sys
-import threading
 import time
-
+import threading
+import sys
 import pystray
 from PIL import Image
-
-from config import DLL_PATH, POLL_INTERVAL, SEND_COOLDOWN
-from credential_ui import create_credential_ui
-from rfid_reader import logger, RFIDReader
-from uploader_async import send_rfids_to_server_async
 from utils import resource_path
-
+from config import API_URL, DLL_PATH, POLL_INTERVAL, SEND_COOLDOWN
+from uploader_async import send_rfids_to_server_async
+from rfid_reader import logger, RFIDReader
+from credential_ui import create_credential_ui
 
 def create_icon():
-    return Image.open(resource_path("icon.ico"))
-
+    try:
+        return Image.open(resource_path("icon.ico"))
+    except Exception as e:
+        logger.error(f"Failed to load icon: {e}")
+        return Image.new('RGB', (64, 64), color='black')
 
 def run_reader(reader, stop_event):
     try:
@@ -25,7 +25,6 @@ def run_reader(reader, stop_event):
         logger.error(f"Reader thread error: {e}")
         stop_event.set()
 
-
 def run_tag_sender(reader, stop_event):
     last_sent_tags = set()
     last_sent_time = 0.0
@@ -33,8 +32,10 @@ def run_tag_sender(reader, stop_event):
         try:
             now = time.time()
             current_tags = set(reader.get_recent_tags().keys())
+            logger.info(f"Detected tags: {current_tags}")
             if current_tags != last_sent_tags and now - last_sent_time >= SEND_COOLDOWN:
                 if current_tags:
+                    logger.info(f"Sending tags to server: {current_tags}")
                     asyncio.run(send_rfids_to_server_async(
                         current_tags,
                         login_url="http://localhost:8000/api/login/"
@@ -45,7 +46,6 @@ def run_tag_sender(reader, stop_event):
         except Exception as e:
             logger.error(f"Tag sender error: {e}")
         time.sleep(POLL_INTERVAL)
-
 
 def main():
     stop_event = threading.Event()
@@ -63,7 +63,12 @@ def main():
         sys.exit(0)
 
     def on_update_credentials(icon, item):
-        create_credential_ui(lambda t: None, login_url="http://localhost:8000/api/login/").mainloop()
+        logger.info("Opening credential UI via system tray")
+        threading.Thread(
+            target=create_credential_ui,
+            args=(lambda t: logger.info(f"Credentials updated: {t}"), "http://localhost:8000/api/login/"),
+            daemon=True
+        ).start()
 
     icon = pystray.Icon(
         "RFID Reader",
@@ -90,7 +95,6 @@ def main():
         return
 
     icon.run()
-
 
 if __name__ == "__main__":
     main()

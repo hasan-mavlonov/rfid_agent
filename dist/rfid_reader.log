@@ -1,148 +1,334 @@
-2025-07-14 22:37:20,807 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-14 22:37:20,831 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
-2025-07-14 22:37:30,976 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-14 22:37:30,983 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
-2025-07-14 22:37:59,125 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-14 22:37:59,133 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
-2025-07-14 22:38:02,367 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-14 22:38:02,375 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
-2025-07-14 22:38:54,480 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-14 22:38:54,550 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-14 22:38:54,552 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-14 22:38:54,552 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-14 22:38:54,552 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-14 22:39:42,621 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:42,628 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC9'}
-2025-07-14 22:39:46,373 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:46,379 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7'}
-2025-07-14 22:39:47,616 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:47,618 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7', 'E28069150000600D8680DDC6'}
-2025-07-14 22:39:49,757 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:49,757 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7'}
-2025-07-14 22:39:51,034 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:51,034 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7', 'E28069150000600D8680DDC6'}
-2025-07-14 22:39:52,580 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:52,580 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC7', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC1', 'E28069150000600D8680DDC6', 'E28069150000700D8680DDC8'}
-2025-07-14 22:39:53,733 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:39:53,736 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
-2025-07-14 22:40:05,083 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:40:05,083 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0'}
-2025-07-14 22:40:06,498 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:40:06,501 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2', 'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
-2025-07-14 22:40:10,225 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:40:10,240 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2', 'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0'}
-2025-07-14 22:40:14,356 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-14 22:40:14,365 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDBE'}
-2025-07-20 15:37:00,452 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-20 15:37:00,520 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-20 15:37:00,521 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-20 15:37:00,521 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-20 15:37:00,521 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-20 15:38:02,232 - pystray._base - ERROR - An error occurred when calling message handler
+2025-07-20 19:57:50,495 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 19:57:50,595 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 19:57:50,595 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 19:57:50,595 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 19:57:50,595 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:50,595 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 19:57:50,698 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:50,799 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:50,901 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,001 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,102 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,203 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,303 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,404 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,504 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,605 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,705 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,806 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:51,906 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,007 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,108 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,209 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,310 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,410 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,511 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,612 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,713 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,814 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:52,915 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,016 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,117 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,218 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,319 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,420 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,520 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,622 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,722 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,823 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:53,924 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,025 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,125 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,226 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,326 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,427 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,527 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,629 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,729 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,830 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:54,930 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,031 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,132 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,233 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,334 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,435 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,535 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,636 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,737 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,837 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:55,938 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,250 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,352 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,453 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,554 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,654 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,755 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,856 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:56,956 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,057 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,157 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,258 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,359 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,460 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,561 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,661 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,762 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,863 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:57,964 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,065 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,166 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,267 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,367 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,469 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,570 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,671 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,772 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,872 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:58,973 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,074 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,175 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,275 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,376 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,477 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,578 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,679 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,779 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,880 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:57:59,980 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,117 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,223 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,323 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,424 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,525 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,625 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,726 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,826 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:00,927 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,028 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,129 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,230 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,330 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,431 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,532 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,633 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,734 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,835 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:01,936 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,037 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,138 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,239 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,340 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,440 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,541 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,642 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,743 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,843 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:02,944 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,045 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,146 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,246 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,347 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,448 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,549 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,650 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,750 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,851 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:03,952 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,052 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,153 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,254 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,355 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,455 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,556 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,657 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,758 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:04,859 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:06,897 - pystray._base - ERROR - An error occurred when calling message handler
 Traceback (most recent call last):
   File "pystray\_win32.py", line 412, in _dispatcher
   File "pystray\_win32.py", line 224, in _on_notify
   File "pystray\_base.py", line 328, in inner
   File "pystray\_base.py", line 453, in __call__
-  File "main.py", line 59, in on_exit
+  File "main.py", line 58, in on_exit
 SystemExit: 0
-2025-07-20 15:42:22,432 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-20 15:42:22,511 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-20 15:42:22,511 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-20 15:42:22,511 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-20 15:42:22,511 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-20 15:42:30,992 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:32,395 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:33,655 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:34,164 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDBF'}
-2025-07-20 15:42:35,165 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:37,597 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:39,122 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:39,628 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
-2025-07-20 15:42:40,768 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:42,619 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:44,026 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:44,532 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
-2025-07-20 15:42:46,122 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:47,653 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:49,096 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:49,597 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
-2025-07-20 15:42:52,279 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:53,973 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:55,260 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:55,762 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
-2025-07-20 15:42:56,715 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:58,034 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:59,473 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:42:59,988 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
-2025-07-20 15:43:00,876 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:02,249 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:03,677 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:04,181 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
-2025-07-20 15:43:06,055 - pystray._base - ERROR - An error occurred when calling message handler
+2025-07-20 19:58:22,064 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 19:58:22,122 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 19:58:22,122 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 19:58:22,123 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 19:58:22,124 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,124 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 19:58:22,225 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,326 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,427 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,528 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,629 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,730 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,831 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:22,947 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,048 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,148 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,249 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,350 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,451 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,551 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,651 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,752 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,853 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:23,953 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:24,054 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:24,154 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:24,255 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF'}
+2025-07-20 19:58:24,261 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,361 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF'}
+2025-07-20 19:58:24,363 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,464 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF'}
+2025-07-20 19:58:24,465 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,567 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:24,568 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,670 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:24,670 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,772 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:24,773 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,875 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:24,877 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:24,978 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:24,980 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,083 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,084 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,187 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,190 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,290 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,293 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,394 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,395 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,497 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,501 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,602 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,604 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,705 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,706 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,808 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,808 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:25,911 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:25,913 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,014 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,015 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,117 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,117 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,219 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,219 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,322 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,325 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,425 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,425 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,528 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,529 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,631 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,633 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,734 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,735 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,837 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,838 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:26,940 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:26,940 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,043 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,044 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,146 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,147 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,248 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,248 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,351 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,353 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,454 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,455 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,556 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,558 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,659 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,661 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,762 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,763 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,865 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,865 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:27,967 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:27,969 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,070 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,071 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,172 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,173 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,275 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,276 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,377 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,377 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,480 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,481 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,582 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,584 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,685 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,685 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,787 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,787 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,890 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,892 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:28,993 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:28,994 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,097 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:29,099 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,200 - rfid_reader - INFO - Detected tags: {'E28069150000700D8680DDC2', 'E28069150000600D8680DDC0'}
+2025-07-20 19:58:29,202 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,303 - rfid_reader - INFO - Detected tags: {'E28069150000600D8680DDC0'}
+2025-07-20 19:58:29,304 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,406 - rfid_reader - INFO - Detected tags: {'E28069150000600D8680DDC0'}
+2025-07-20 19:58:29,406 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,508 - rfid_reader - INFO - Detected tags: {'E28069150000600D8680DDC0'}
+2025-07-20 19:58:29,511 - rfid_reader - ERROR - Tag sender error: name 'keyring' is not defined
+2025-07-20 19:58:29,612 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:29,713 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:29,814 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:29,915 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,016 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,117 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,217 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,318 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,419 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,520 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,621 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,722 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,823 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:30,923 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,024 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,125 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,225 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,326 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,427 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,528 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,628 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,729 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,830 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:31,931 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,032 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,132 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,233 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,334 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,435 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,535 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,754 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,856 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:32,957 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,057 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,158 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,259 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,359 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,460 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,561 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,662 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,763 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,864 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:33,964 - rfid_reader - INFO - Detected tags: set()
+2025-07-20 19:58:36,041 - pystray._base - ERROR - An error occurred when calling message handler
 Traceback (most recent call last):
   File "pystray\_win32.py", line 412, in _dispatcher
   File "pystray\_win32.py", line 224, in _on_notify
   File "pystray\_base.py", line 328, in inner
   File "pystray\_base.py", line 453, in __call__
-  File "main.py", line 59, in on_exit
+  File "main.py", line 58, in on_exit
 SystemExit: 0
-2025-07-20 15:43:21,923 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-20 15:43:21,979 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-20 15:43:21,980 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-20 15:43:21,980 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-20 15:43:21,980 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-20 15:43:35,683 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:37,206 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:38,654 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:39,166 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
-2025-07-20 15:43:40,184 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:41,617 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:42,977 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
-2025-07-20 15:43:43,478 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0', 'E28069150000700D8680DDC2'}
-2025-07-20 15:43:55,148 - pystray._base - ERROR - An error occurred when calling message handler
-Traceback (most recent call last):
-  File "pystray\_win32.py", line 412, in _dispatcher
-  File "pystray\_win32.py", line 224, in _on_notify
-  File "pystray\_base.py", line 328, in inner
-  File "pystray\_base.py", line 453, in __call__
-  File "main.py", line 59, in on_exit
-SystemExit: 0
-2025-07-20 16:03:19,769 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-20 16:03:19,844 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-20 16:03:19,845 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-20 16:03:19,845 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-20 16:03:19,846 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-20 16:03:31,689 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:33,045 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:35,041 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:35,546 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
-2025-07-20 16:03:36,764 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:38,207 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:39,697 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
-2025-07-20 16:03:40,213 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
-2025-07-20 16:03:47,239 - pystray._base - ERROR - An error occurred when calling message handler
-Traceback (most recent call last):
-  File "pystray\_win32.py", line 412, in _dispatcher
-  File "pystray\_win32.py", line 224, in _on_notify
-  File "pystray\_base.py", line 328, in inner
-  File "pystray\_base.py", line 453, in __call__
-  File "main.py", line 59, in on_exit
-SystemExit: 0
-2025-07-20 16:06:38,192 - rfid_reader - INFO - Attempting to initialize RFID reader...
-2025-07-20 16:06:38,267 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
-2025-07-20 16:06:38,268 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
-2025-07-20 16:06:38,268 - rfid_reader - INFO - RFID reader thread started successfully
-2025-07-20 16:06:38,268 - rfid_reader - INFO - Tag sender thread started successfully
-2025-07-20 16:06:45,436 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:45,438 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
-2025-07-20 16:06:47,904 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:47,906 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDBF', 'E28069150000700D8680DDC2'}
-2025-07-20 16:06:54,050 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:54,053 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000700D8680DDC2'}
-2025-07-20 16:06:55,200 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:55,201 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2'}
-2025-07-20 16:06:56,329 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:56,331 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0', 'E28069150000700D8680DDC2'}
-2025-07-20 16:06:57,563 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
-2025-07-20 16:06:57,565 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2'}
