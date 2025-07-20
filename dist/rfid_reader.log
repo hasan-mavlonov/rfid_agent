@@ -1,0 +1,148 @@
+2025-07-14 22:37:20,807 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-14 22:37:20,831 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
+2025-07-14 22:37:30,976 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-14 22:37:30,983 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
+2025-07-14 22:37:59,125 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-14 22:37:59,133 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
+2025-07-14 22:38:02,367 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-14 22:38:02,375 - rfid_reader - ERROR - Failed to initialize RFID reader: No USB device found. Application will exit.
+2025-07-14 22:38:54,480 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-14 22:38:54,550 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-14 22:38:54,552 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-14 22:38:54,552 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-14 22:38:54,552 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-14 22:39:42,621 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:42,628 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC9'}
+2025-07-14 22:39:46,373 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:46,379 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7'}
+2025-07-14 22:39:47,616 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:47,618 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7', 'E28069150000600D8680DDC6'}
+2025-07-14 22:39:49,757 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:49,757 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7'}
+2025-07-14 22:39:51,034 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:51,034 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC8', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC7', 'E28069150000600D8680DDC6'}
+2025-07-14 22:39:52,580 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:52,580 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC7', 'E28069150000600D8680DDC9', 'E28069150000700D8680DDC1', 'E28069150000600D8680DDC6', 'E28069150000700D8680DDC8'}
+2025-07-14 22:39:53,733 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:39:53,736 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
+2025-07-14 22:40:05,083 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:40:05,083 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0'}
+2025-07-14 22:40:06,498 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:40:06,501 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2', 'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000600D8680DDC0'}
+2025-07-14 22:40:10,225 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:40:10,240 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2', 'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0'}
+2025-07-14 22:40:14,356 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-14 22:40:14,365 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDBE'}
+2025-07-20 15:37:00,452 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 15:37:00,520 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 15:37:00,521 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 15:37:00,521 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 15:37:00,521 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 15:38:02,232 - pystray._base - ERROR - An error occurred when calling message handler
+Traceback (most recent call last):
+  File "pystray\_win32.py", line 412, in _dispatcher
+  File "pystray\_win32.py", line 224, in _on_notify
+  File "pystray\_base.py", line 328, in inner
+  File "pystray\_base.py", line 453, in __call__
+  File "main.py", line 59, in on_exit
+SystemExit: 0
+2025-07-20 15:42:22,432 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 15:42:22,511 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 15:42:22,511 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 15:42:22,511 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 15:42:22,511 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 15:42:30,992 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:32,395 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:33,655 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:34,164 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDBF'}
+2025-07-20 15:42:35,165 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:37,597 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:39,122 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:39,628 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
+2025-07-20 15:42:40,768 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:42,619 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:44,026 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:44,532 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
+2025-07-20 15:42:46,122 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:47,653 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:49,096 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:49,597 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
+2025-07-20 15:42:52,279 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:53,973 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:55,260 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:55,762 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
+2025-07-20 15:42:56,715 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:58,034 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:59,473 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:42:59,988 - rfid_reader - INFO - Tags sent: {'E28069150000600D8680DDC0', 'E28069150000700D8680DDC1'}
+2025-07-20 15:43:00,876 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:02,249 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:03,677 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:04,181 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
+2025-07-20 15:43:06,055 - pystray._base - ERROR - An error occurred when calling message handler
+Traceback (most recent call last):
+  File "pystray\_win32.py", line 412, in _dispatcher
+  File "pystray\_win32.py", line 224, in _on_notify
+  File "pystray\_base.py", line 328, in inner
+  File "pystray\_base.py", line 453, in __call__
+  File "main.py", line 59, in on_exit
+SystemExit: 0
+2025-07-20 15:43:21,923 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 15:43:21,979 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 15:43:21,980 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 15:43:21,980 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 15:43:21,980 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 15:43:35,683 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:37,206 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:38,654 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:39,166 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
+2025-07-20 15:43:40,184 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:41,617 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:42,977 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 302 Found"
+2025-07-20 15:43:43,478 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0', 'E28069150000700D8680DDC2'}
+2025-07-20 15:43:55,148 - pystray._base - ERROR - An error occurred when calling message handler
+Traceback (most recent call last):
+  File "pystray\_win32.py", line 412, in _dispatcher
+  File "pystray\_win32.py", line 224, in _on_notify
+  File "pystray\_base.py", line 328, in inner
+  File "pystray\_base.py", line 453, in __call__
+  File "main.py", line 59, in on_exit
+SystemExit: 0
+2025-07-20 16:03:19,769 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 16:03:19,844 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 16:03:19,845 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 16:03:19,845 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 16:03:19,846 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 16:03:31,689 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:33,045 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:35,041 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:35,546 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
+2025-07-20 16:03:36,764 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:38,207 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:39,697 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 403 Forbidden"
+2025-07-20 16:03:40,213 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1'}
+2025-07-20 16:03:47,239 - pystray._base - ERROR - An error occurred when calling message handler
+Traceback (most recent call last):
+  File "pystray\_win32.py", line 412, in _dispatcher
+  File "pystray\_win32.py", line 224, in _on_notify
+  File "pystray\_base.py", line 328, in inner
+  File "pystray\_base.py", line 453, in __call__
+  File "main.py", line 59, in on_exit
+SystemExit: 0
+2025-07-20 16:06:38,192 - rfid_reader - INFO - Attempting to initialize RFID reader...
+2025-07-20 16:06:38,267 - rfid_reader - INFO - [RFID Reader Initialized] Device is active.
+2025-07-20 16:06:38,268 - rfid_reader - INFO - [RFID Reader Running] Reading loop started.
+2025-07-20 16:06:38,268 - rfid_reader - INFO - RFID reader thread started successfully
+2025-07-20 16:06:38,268 - rfid_reader - INFO - Tag sender thread started successfully
+2025-07-20 16:06:45,436 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:45,438 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC2'}
+2025-07-20 16:06:47,904 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:47,906 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDBF', 'E28069150000700D8680DDC2'}
+2025-07-20 16:06:54,050 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:54,053 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDBF', 'E28069150000700D8680DDC2'}
+2025-07-20 16:06:55,200 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:55,201 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2'}
+2025-07-20 16:06:56,329 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:56,331 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000600D8680DDC0', 'E28069150000700D8680DDC2'}
+2025-07-20 16:06:57,563 - httpx - INFO - HTTP Request: POST https://tracky-d764.onrender.com/products/store-rfids/ "HTTP/1.1 200 OK"
+2025-07-20 16:06:57,565 - rfid_reader - INFO - Tags sent: {'E28069150000700D8680DDC1', 'E28069150000700D8680DDC2'}
