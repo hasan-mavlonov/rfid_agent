@@ -1,3 +1,4 @@
+# rfid_agent/credential_ui.py
 import tkinter as tk
 from tkinter import messagebox
 
@@ -12,7 +13,6 @@ def create_credential_ui(on_submit, login_url="http://localhost:8000/api/login/"
     root.resizable(False, False)
     root.configure(bg="#f0f0f0")
 
-    # Styling
     label_style = {"bg": "#f0f0f0", "font": ("Arial", 12)}
     entry_style = {"font": ("Arial", 12), "width": 20}
     button_style = {"bg": "#4CAF50", "fg": "white", "font": ("Arial", 12), "width": 15}
