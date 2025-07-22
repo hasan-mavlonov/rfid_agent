@@ -67,8 +67,8 @@ def validate_credentials(phone, password, login_url):
         logger.info(f"Validating credentials against {login_url}")
         response = httpx.post(
             login_url,
-            json={"phone_number": phone, "password": password},  # Changed from data to json
-            headers={"Content-Type": "application/json"},       # Added Content-Type
+            json={"phone_number": phone, "password": password},
+            headers={"Content-Type": "application/json"},
             timeout=5.0
         )
         if response.status_code == 200:

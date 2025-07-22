@@ -3,6 +3,8 @@ import asyncio
 import time
 import threading
 import sys
+
+import keyring
 import pystray
 from PIL import Image
 from utils import resource_path
@@ -10,6 +12,7 @@ from config import API_URL, DLL_PATH, POLL_INTERVAL, SEND_COOLDOWN
 from uploader_async import send_rfids_to_server_async
 from rfid_reader import logger, RFIDReader
 from credential_ui import create_credential_ui
+import queue
 
 def create_icon():
     try:
@@ -25,50 +28,94 @@ def run_reader(reader, stop_event):
         logger.error(f"Reader thread error: {e}")
         stop_event.set()
 
-def run_tag_sender(reader, stop_event):
+def run_tag_sender(reader, stop_event, auth_valid):
     last_sent_tags = set()
     last_sent_time = 0.0
+    max_failed_attempts = 3
+    failed_attempts = 0
+
     while not stop_event.is_set():
+        if auth_valid.is_set():
+            try:
+                now = time.time()
+                current_tags = set(reader.get_recent_tags().keys())
+                logger.info(f"Detected tags: {current_tags}")
+                if current_tags != last_sent_tags and now - last_sent_time >= SEND_COOLDOWN:
+                    if current_tags:
+                        logger.info(f"Sending tags to server: {current_tags}")
+                        success = asyncio.run(send_rfids_to_server_async(
+                            current_tags,
+                            login_url="http://localhost:8000/api/login/"
+                        ))
+                        if success:
+                            last_sent_tags = current_tags
+                            last_sent_time = now
+                            logger.info(f"Tags sent: {current_tags}")
+                            failed_attempts = 0  # Reset on success
+                        else:
+                            failed_attempts += 1
+                            logger.warning(f"Failed to send tags, attempts: {failed_attempts}")
+                            if failed_attempts >= max_failed_attempts:
+                                logger.error("Too many failed attempts, halting sending")
+                                auth_valid.clear()  # Invalidate authentication state
+                                failed_attempts = 0  # Reset after halting
+            except Exception as e:
+                logger.error(f"Tag sender error: {e}")
+        else:
+            logger.info("Authentication invalid, waiting for re-authentication")
+            last_sent_tags = set()  # Reset to avoid sending on re-auth
+            time.sleep(POLL_INTERVAL)  # Wait while auth is invalid
+
+def on_exit(icon, item):
+    logger.info("Exiting application via system tray")
+    stop_event.set()
+    # Ensure threads are joined with a timeout
+    if reader_thread and reader_thread.is_alive():
+        reader_thread.join(timeout=2.0)
+    if sender_thread and sender_thread.is_alive():
+        sender_thread.join(timeout=2.0)
+    # Stop the icon after threads are handled
+    icon.stop()
+    sys.exit(0)
+
+def on_update_credentials(icon, item):
+    logger.info("Opening credential UI via system tray")
+    def run_ui():
+        result_queue = queue.Queue()
+        def on_submit(token):
+            result_queue.put(token)
+            root.quit()  # Close the UI after submission
+        root = create_credential_ui(on_submit, "http://localhost:8000/api/login/")
+        root.mainloop()
         try:
-            now = time.time()
-            current_tags = set(reader.get_recent_tags().keys())
-            logger.info(f"Detected tags: {current_tags}")
-            if current_tags != last_sent_tags and now - last_sent_time >= SEND_COOLDOWN:
-                if current_tags:
-                    logger.info(f"Sending tags to server: {current_tags}")
-                    asyncio.run(send_rfids_to_server_async(
-                        current_tags,
-                        login_url="http://localhost:8000/api/login/"
-                    ))
-                    last_sent_tags = current_tags
-                    last_sent_time = now
-                    logger.info(f"Tags sent: {current_tags}")
-        except Exception as e:
-            logger.error(f"Tag sender error: {e}")
-        time.sleep(POLL_INTERVAL)
+            token = result_queue.get_nowait()
+            if token:
+                keyring.set_password("rfid_agent", "token", token)
+                logger.info(f"Credentials updated: {token}")
+                auth_valid.set()  # Restore authentication state on success
+            else:
+                auth_valid.clear()  # Invalidate if no token
+        except queue.Empty:
+            logger.warning("UI closed without submitting credentials")
+            auth_valid.clear()  # Invalidate on UI closure without submission
+
+    # Run UI in a separate thread, non-daemon, to ensure it completes
+    ui_thread = threading.Thread(target=run_ui, daemon=False)
+    ui_thread.start()
 
 def main():
+    global stop_event, reader, reader_thread, sender_thread, auth_valid
     stop_event = threading.Event()
+    auth_valid = threading.Event()  # New authentication state flag
     reader = None
     reader_thread = None
     sender_thread = None
 
-    def on_exit(icon, item):
-        stop_event.set()
-        if reader_thread and reader_thread.is_alive():
-            reader_thread.join(timeout=2.0)
-        if sender_thread and sender_thread.is_alive():
-            sender_thread.join(timeout=2.0)
-        icon.stop()
-        sys.exit(0)
-
-    def on_update_credentials(icon, item):
-        logger.info("Opening credential UI via system tray")
-        threading.Thread(
-            target=create_credential_ui,
-            args=(lambda t: logger.info(f"Credentials updated: {t}"), "http://localhost:8000/api/login/"),
-            daemon=True
-        ).start()
+    # Set initial authentication state based on existing token
+    if keyring.get_password("rfid_agent", "token"):
+        auth_valid.set()
+    else:
+        auth_valid.clear()
 
     icon = pystray.Icon(
         "RFID Reader",
@@ -86,7 +133,7 @@ def main():
         reader_thread = threading.Thread(target=run_reader, args=(reader, stop_event), daemon=True)
         reader_thread.start()
         logger.info("RFID reader thread started successfully")
-        sender_thread = threading.Thread(target=run_tag_sender, args=(reader, stop_event), daemon=True)
+        sender_thread = threading.Thread(target=run_tag_sender, args=(reader, stop_event, auth_valid), daemon=True)
         sender_thread.start()
         logger.info("Tag sender thread started successfully")
     except Exception as e:

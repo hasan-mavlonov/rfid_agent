@@ -6,9 +6,8 @@ from ctypes import c_int, byref, create_string_buffer
 from config import POLL_INTERVAL
 
 logger = logging.getLogger("rfid_reader")
-# Log to file with INFO level
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     filename='rfid_reader.log',
     filemode='a'
