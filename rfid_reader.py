@@ -1,3 +1,4 @@
+# rfid_agent/rfid_reader.py
 import ctypes
 import time
 import logging
@@ -5,21 +6,33 @@ from ctypes import c_int, byref, create_string_buffer
 
 from config import POLL_INTERVAL
 
+# Create or get logger
 logger = logging.getLogger("rfid_reader")
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='rfid_reader.log',
-    filemode='a'
-)
 
+# Set root logger level to DEBUG to capture all messages
+logger.setLevel(logging.DEBUG)
+
+# Create file handler for DEBUG level only
+log_file = "rfid_reader.log"
+file_handler = logging.FileHandler(log_file)
+file_handler.setLevel(logging.DEBUG)  # Restrict file to DEBUG messages
+file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
+
+# Optional: Add console handler for INFO and above (e.g., for runtime feedback)
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)  # Console shows INFO, WARNING, ERROR
+console_formatter = logging.Formatter('%(levelname)s - %(message)s')
+console_handler.setFormatter(console_formatter)
+logger.addHandler(console_handler)
 
 class RFIDReader:
     def __init__(self, dll_path):
         self.dll = ctypes.windll.LoadLibrary(dll_path)
         self._initialize_reader()
         self.tag_registry = {}  # {tag_id: timestamp}
-        logger.info("[RFID Reader Initialized] Device is active.")
+        logger.debug("[RFID Reader Initialized] Device is active.")
 
     def _initialize_reader(self):
         """Initialize the RFID reader device."""
@@ -48,7 +61,7 @@ class RFIDReader:
 
     def run(self):
         """Continuously read tags from the device."""
-        logger.info("[RFID Reader Running] Reading loop started.")
+        logger.debug("[RFID Reader Running] Reading loop started.")
         while True:
             try:
                 buffer = create_string_buffer(9182)
