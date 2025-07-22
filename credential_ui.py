@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def create_credential_ui(on_submit, login_url="http://localhost:8000/api/login/"):
-    logger.info("Creating credential UI")
+    logger.debug("Creating credential UI")
     root = tk.Tk()
     root.title("RFID Agent Login")
     root.geometry("300x250")
@@ -35,27 +35,27 @@ def create_credential_ui(on_submit, login_url="http://localhost:8000/api/login/"
         phone = phone_entry.get().strip()
         password = password_entry.get().strip()
         test_token = token_entry.get().strip()
-        logger.info(f"Submitting credentials: phone={phone}, test_token={'set' if test_token else 'not set'}")
+        logger.debug(f"Submitting credentials: phone={phone}, test_token={'set' if test_token else 'not set'}")
         if test_token:
             keyring.set_password("rfid_agent", "token", test_token)
-            logger.info("Test token stored")
+            logger.debug("Test token stored")
             messagebox.showinfo("Success", "Test token saved")
             on_submit(test_token)
             root.destroy()
             return
         if not phone or not password:
-            logger.error("Empty phone number or password")
+            logger.debug("Empty phone number or password")
             messagebox.showerror("Error", "Please enter phone number and password")
             return
         token = validate_credentials(phone, password, login_url)
         if token:
             keyring.set_password("rfid_agent", "token", token)
-            logger.info("Credentials valid, token stored")
+            logger.debug("Credentials valid, token stored")
             messagebox.showinfo("Success", "Credentials valid")
             on_submit(token)
             root.destroy()
         else:
-            logger.error("Invalid credentials")
+            logger.debug("Invalid credentials")
             messagebox.showerror("Error", "Invalid credentials")
 
     tk.Button(root, text="Submit", command=submit, **button_style).pack(pady=10)
@@ -64,7 +64,7 @@ def create_credential_ui(on_submit, login_url="http://localhost:8000/api/login/"
 
 def validate_credentials(phone, password, login_url):
     try:
-        logger.info(f"Validating credentials against {login_url}")
+        logger.debug(f"Validating credentials against {login_url}")
         response = httpx.post(
             login_url,
             json={"phone_number": phone, "password": password},
@@ -72,10 +72,10 @@ def validate_credentials(phone, password, login_url):
             timeout=5.0
         )
         if response.status_code == 200:
-            logger.info("Validation successful")
+            logger.debug("Validation successful")
             return response.json().get("token")
-        logger.error(f"Validation failed: {response.status_code}")
+        logger.debug(f"Validation failed: {response.status_code}")
         return None
     except Exception as e:
-        logger.error(f"Validation error: {e}")
+        logger.debug(f"Validation error: {e}")
         return None

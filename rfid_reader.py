@@ -1,4 +1,3 @@
-# rfid_agent/rfid_reader.py
 import ctypes
 import time
 import logging
@@ -12,10 +11,16 @@ logger = logging.getLogger("rfid_reader")
 # Set root logger level to DEBUG to capture all messages
 logger.setLevel(logging.DEBUG)
 
+# Custom filter to allow only DEBUG level
+class DebugOnlyFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno == logging.DEBUG
+
 # Create file handler for DEBUG level only
 log_file = "rfid_reader.log"
 file_handler = logging.FileHandler(log_file)
 file_handler.setLevel(logging.DEBUG)  # Restrict file to DEBUG messages
+file_handler.addFilter(DebugOnlyFilter())  # Ensure only DEBUG messages pass
 file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
@@ -80,7 +85,7 @@ class RFIDReader:
                     }
 
             except Exception as e:
-                logger.error(f"Reader loop error: {e}")
+                logger.debug(f"Reader loop error: {e}")
                 time.sleep(POLL_INTERVAL)
 
             time.sleep(POLL_INTERVAL)  # Poll every 20ms
