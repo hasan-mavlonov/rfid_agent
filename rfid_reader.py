@@ -20,13 +20,6 @@ file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(m
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
 
-# Optional: Add console handler for INFO and above (e.g., for runtime feedback)
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)  # Console shows INFO, WARNING, ERROR
-console_formatter = logging.Formatter('%(levelname)s - %(message)s')
-console_handler.setFormatter(console_formatter)
-logger.addHandler(console_handler)
-
 class RFIDReader:
     def __init__(self, dll_path):
         self.dll = ctypes.windll.LoadLibrary(dll_path)
