@@ -7,7 +7,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def create_credential_ui(on_submit, login_url="http://localhost:8000/api/login/"):
+def create_credential_ui(on_submit, login_url="https://tracky-d764.onrender.com/api/login/"):
     logger.debug("Creating credential UI")
     root = tk.Tk()
     root.title("RFID Agent Login")

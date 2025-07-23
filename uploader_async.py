@@ -17,7 +17,7 @@ def run_ui_in_thread(login_url, result_queue):
     root = create_credential_ui(on_submit, login_url)
     root.mainloop()
 
-async def send_rfids_to_server_async(rfid_list, retries=3, login_url="http://localhost:8000/api/login/"):
+async def send_rfids_to_server_async(rfid_list, retries=3, login_url="https://tracky-d764.onrender.com/api/login/"):
     if not rfid_list:
         logger.debug("No RFIDs to send")
         return False  # Indicate sending failed

@@ -20,3 +20,4 @@ DLL_PATH = config["rfid"]["dll_path"]
 POLL_INTERVAL = float(config["agent"]["poll_interval"])
 SEND_COOLDOWN = float(config["agent"]["send_cooldown"])
 RECONNECT_INTERVAL = 5.0  # Time to wait before retrying device connection (seconds)
+LOGIN_URL = config["server"]["login_url"]

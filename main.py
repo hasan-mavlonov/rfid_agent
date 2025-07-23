@@ -1,18 +1,20 @@
 # rfid_agent/main.py
 import asyncio
-import time
-import threading
+import queue
 import sys
+import threading
+import time
 
 import keyring
 import pystray
 from PIL import Image
-from utils import resource_path
-from config import API_URL, DLL_PATH, POLL_INTERVAL, SEND_COOLDOWN
-from uploader_async import send_rfids_to_server_async
-from rfid_reader import logger, RFIDReader
+
+from config import DLL_PATH, POLL_INTERVAL, SEND_COOLDOWN, LOGIN_URL
 from credential_ui import create_credential_ui
-import queue
+from rfid_reader import logger, RFIDReader
+from uploader_async import send_rfids_to_server_async
+from utils import resource_path
+
 
 def create_icon():
     try:
@@ -21,12 +23,14 @@ def create_icon():
         logger.debug(f"Failed to load icon: {e}")
         return Image.new('RGB', (64, 64), color='black')
 
+
 def run_reader(reader, stop_event):
     try:
         reader.run()
     except Exception as e:
         logger.debug(f"Reader thread error: {e}")
         stop_event.set()
+
 
 def run_tag_sender(reader, stop_event, auth_valid):
     last_sent_tags = set()
@@ -48,7 +52,7 @@ def run_tag_sender(reader, stop_event, auth_valid):
                         logger.info(f"Sending tags to server: {current_tags}")
                         success = asyncio.run(send_rfids_to_server_async(
                             current_tags,
-                            login_url="http://localhost:8000/api/login/"
+                            login_url="https://tracky-d764.onrender.com/api/login/"
                         ))
                         if success:
                             last_sent_tags = current_tags
@@ -70,6 +74,7 @@ def run_tag_sender(reader, stop_event, auth_valid):
             last_logged_tags = set()  # Reset logged tags
             time.sleep(POLL_INTERVAL)  # Wait while auth is invalid
 
+
 def on_exit(icon, item):
     logger.debug("Exiting application via system tray")
     stop_event.set()
@@ -82,14 +87,18 @@ def on_exit(icon, item):
     icon.stop()
     sys.exit(0)
 
+
 def on_update_credentials(icon, item):
     logger.debug("Opening credential UI via system tray")
+
     def run_ui():
         result_queue = queue.Queue()
+
         def on_submit(token):
             result_queue.put(token)
             root.quit()  # Close the UI after submission
-        root = create_credential_ui(on_submit, "http://localhost:8000/api/login/")
+
+        root = create_credential_ui(on_submit, LOGIN_URL)
         root.mainloop()
         try:
             token = result_queue.get_nowait()
@@ -103,9 +112,9 @@ def on_update_credentials(icon, item):
             logger.debug("UI closed without submitting credentials")
             auth_valid.clear()  # Invalidate on UI closure without submission
 
-    # Run UI in a separate thread, non-daemon, to ensure it completes
     ui_thread = threading.Thread(target=run_ui, daemon=False)
     ui_thread.start()
+
 
 def main():
     global stop_event, reader, reader_thread, sender_thread, auth_valid
@@ -147,5 +156,6 @@ def main():
 
     icon.run()
 
+
 if __name__ == "__main__":
-    main()  
+    main()
