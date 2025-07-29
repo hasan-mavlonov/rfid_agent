@@ -1,6 +1,6 @@
 # 🧠 Tracky RFID Agent – Native Windows Bridge for RFID Tag Detection
 
-This is the official **RFID Agent** for [Tracky](https://github.com/YourOrg/Tracky), a real-time RFID inventory and POS system.  
+This is the official **RFID Agent** for [Tracky](https://github.com/hasan-mavlonov/Tracky), a real-time RFID inventory and POS system.  
 The Agent runs as a background Windows application, continuously reading RFID tags from USB-connected readers and sending them to the local Flask service, which then relays the data to the Tracky Django server.
 
 ---
@@ -57,7 +57,7 @@ rfid-agent/
 1. **Clone the Repo**
 
    ```
-   git clone https://github.com/YourOrg/rfid-agent.git
+   git clone [https://github.com/hasan-mavlonov/rfid-agent.git]
    cd rfid-agent
    ```
 
@@ -133,8 +133,8 @@ To run the agent in the background on Windows startup:
 ## 📬 Contact
 
 Want to integrate another RFID reader or report a bug?  
-📧 [hasanmavlonov@gmail.com](mailto:hasanmavlonov@gmail.com)  
-🌐 [https://github.com/hasanmavlonov](https://github.com/hasanmavlonov) (or your organization page)
+📧 [hmavlanov79@gmail.com](mailto:hmavlanov79@gmail.com)  
+🌐 [https://github.com/hasan-mavlonov](https://github.com/hasan-mavlonov) 
 
 ---
 
